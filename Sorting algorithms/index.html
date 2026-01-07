@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Sorting Lab</h2>
+
+        <input id="arrayInput" placeholder="5,1,4,2">
+        <button onclick="setArray()">Load</button>
+
+        <label>Speed</label>
+        <input type="range" min="100" max="1500" value="700" id="speed">
+
+        <div class="sidebar-actions">
+            <button onclick="pause()">⏸ Pause</button>
+            <button onclick="resume()">▶ Resume</button>
+            <button onclick="toggleDark()">🌙 Theme</button>
+            <button id="voiceBtn" onclick="toggleVoiceUI()">🔊 Voice OFF</button>
+        </div>
+
+        <div class="algorithms">
+            <button onclick="start('bubble')">Bubble</button>
+            <button onclick="start('selection')">Selection</button>
+            <button onclick="start('insertion')">Insertion</button>
+            <button onclick="start('merge')">Merge</button>
+            <button onclick="start('quick')">Quick</button>
+        </div>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <main class="main">
+
+        <!-- STATUS BAR -->
+        <div class="status-bar">
+            <span>Array: <b id="arrayText"></b></span>
+            <span>Step: <b id="currentStep">0</b></span>
+        </div>
+
+        <!-- ANIMATION STAGE -->
+        <div class="stage">
+            <h3>Sorting Animation</h3>
+            <div id="steps" class="stage-area"></div>
+            <p id="finalResult"></p>
+        </div>
+
+        <!-- LOG CONSOLE -->
+        <div class="console">
+            <h3>Execution Console</h3>
+            <div id="log"></div>
+        </div>
+
+    </main>
+
+</div>
+
+<!-- FLOATING LEGEND -->
+<div class="legend-float">
+    <div><span class="l compare"></span> Compare</div>
+    <div><span class="l swap"></span> Swap</div>
+    <div><span class="l left-sub"></span> Left</div>
+    <div><span class="l right-sub"></span> Right</div>
+    <div><span class="l merge-pos"></span> Active</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
